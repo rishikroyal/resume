@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rishik Royal Upparapalli - Resume</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter Font for Clean, Classic ATS-Friendly Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Classic A4 Document Sheet Styling */
+        body {
+            background-color: #F0F2F5;
+            color: #111111;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .a4-sheet {
+            background-color: #FFFFFF;
+            width: 100%;
+            max-width: 210mm; /* Standard A4 Width */
+            min-height: 297mm; /* Standard A4 Height */
+            margin: 24px auto;
+            padding: 16mm 18mm;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border: 1px solid #E2E5E9;
+        }
+
+        /* Traditional Resume Section Headings */
+        .section-heading {
+            font-size: 11pt;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: #111111;
+            border-bottom: 1.5px solid #111111;
+            padding-bottom: 2px;
+            margin-top: 12px;
+            margin-bottom: 6px;
+        }
+
+        /* Crisp Bullet List Styling */
+        .resume-list {
+            list-style-type: disc;
+            padding-left: 18px;
+            margin: 3px 0 0 0;
+        }
+
+        .resume-list li {
+            margin-bottom: 2.5px;
+            line-height: 1.38;
+        }
+
+        /* Responsive Mobile Adjustments */
+        @media (max-width: 640px) {
+            .a4-sheet {
+                margin: 0;
+                padding: 20px 16px;
+                min-height: auto;
+                box-shadow: none;
+                border: none;
+            }
+        }
+
+        /* Exact Print Styling for 1-Page PDF Output */
+        @media print {
+            @page {
+                size: A4 portrait;
+                margin: 10mm 12mm;
+            }
+            html, body {
+                background-color: #FFFFFF !important;
+                color: #111111 !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .a4-sheet {
+                width: 100% !important;
+                max-width: 100% !important;
+                min-height: auto !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                box-shadow: none !important;
+                border: none !important;
+            }
+            a {
+                color: #111111 !important;
+                text-decoration: none !important;
+            }
+            section, .entry-block {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Unobtrusive Print / Save PDF Button (Hidden when printing) -->
+    <div class="no-print fixed top-4 right-4 z-50">
+        <button onclick="window.print()" 
+                class="bg-white hover:bg-gray-50 text-[#111111] border border-gray-300 shadow-sm px-3.5 py-1.5 rounded text-xs font-medium tracking-wide transition cursor-pointer">
+            Print / Save PDF
+        </button>
+    </div>
+
+    <!-- Centered White A4 Resume Sheet -->
+    <main class="a4-sheet text-[9.75pt] leading-[1.38] text-[#111111]">
+
+        <!-- HEADER -->
+        <header class="text-center mb-3">
+            <h1 class="text-[20pt] font-bold tracking-tight text-[#111111] uppercase leading-tight">
+                RISHIK ROYAL UPPARAPALLI
+            </h1>
+            <div class="mt-1 text-[9.5pt] text-[#111111] flex flex-wrap justify-center items-center gap-x-1.5 gap-y-0.5">
+                <span>Phone: <a href="tel:+917993378703" class="hover:underline">+91 7993378703</a></span>
+                <span>|</span>
+                <span>Email: <a href="mailto:rishikroyalupparapalli@gmail.com" class="hover:underline">rishikroyalupparapalli@gmail.com</a></span>
+            </div>
+            <div class="mt-0.5 text-[9.5pt] text-[#111111] flex flex-wrap justify-center items-center gap-x-1.5 gap-y-0.5">
+                <a href="#" target="_blank" rel="noopener noreferrer" class="underline hover:text-black">GitHub - Profile</a>
+                <span>|</span>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="underline hover:text-black">LinkedIn - Profile</a>
+                <span>|</span>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="underline hover:text-black">Portfolio - Website</a>
+            </div>
+        </header>
+
+        <!-- SUMMARY -->
+        <section>
+            <h2 class="section-heading">SUMMARY</h2>
+            <p class="text-[#111111]">
+                Backend Engineer who shipped production systems processing 10K+ monthly events (99.9% uptime), improving customer engagement 40% and lead conversion 25%. Built event-driven automation, LLM-powered systems, and REST APIs in Python, FastAPI and Flask. 11 months full-time at PINGBIX plus 3 shipped projects.
+            </p>
+        </section>
+
+        <!-- SKILLS -->
+        <section>
+            <h2 class="section-heading">SKILLS</h2>
+            <div class="space-y-1 text-[#111111]">
+                <div><span class="font-bold">Programming Languages:</span> Python, SQL, JavaScript, Java.</div>
+                <div><span class="font-bold">Backend Development:</span> FastAPI, Flask, REST APIs, Webhooks, Microservices, API Integration.</div>
+                <div><span class="font-bold">Software Engineering:</span> OOP, Data Structures &amp; Algorithms, SDLC, Agile Development, Design Principles, Debugging, Testing, Code Quality Practices.</div>
+                <div><span class="font-bold">Databases:</span> MongoDB, MySQL, PostgreSQL, Database Design, Query Optimization.</div>
+                <div><span class="font-bold">AI &amp; Machine Learning:</span> LLMS, RAG, LangChain, Vector Databases, Semantic Search, Scikit-learn, NLP.</div>
+                <div><span class="font-bold">Cloud &amp; DevOps:</span> AWS (EC2, S3), Docker, Git, GitHub Actions, CI/CD.</div>
+                <div><span class="font-bold">Tools &amp; Practices:</span> Git Version Control, Postman, Technical Documentation, API Testing, Code Reviews, Issue Troubleshooting.</div>
+            </div>
+        </section>
+
+        <!-- PROFESSIONAL EXPERIENCE -->
+        <section>
+            <h2 class="section-heading">PROFESSIONAL EXPERIENCE</h2>
+            <div class="entry-block">
+                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline">
+                    <div class="font-bold text-[#111111]">
+                        PINGBIX &mdash; Role: AI Developer
+                    </div>
+                    <div class="font-semibold text-[#111111] sm:text-right">
+                        Aug 2025 - June 2026
+                    </div>
+                </div>
+                <ul class="resume-list">
+                    <li>Shipped event-driven automation platform: 10K+ monthly events, 99.9% uptime, 40% engagement lift, 25% lead conversion increase.</li>
+                    <li>Built 15+ backend APIs (FastAPI/Flask) for messaging, scheduling, webhooks and third-party integrations; reduced deployment time 60% via GitHub Actions CI/CD.</li>
+                    <li>Debugged and fixed production issues; 20% drop in recurring bugs through code reviews and structured problem-solving.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section>
+            <h2 class="section-heading">PROJECTS</h2>
+
+            <!-- Project 1 -->
+            <div class="entry-block mb-2.5">
+                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline">
+                    <div class="font-bold text-[#111111]">
+                        1. DataGuard AI - AI-Powered Data Privacy &amp; Compliance Platform
+                    </div>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="underline font-medium text-[#111111] sm:text-right">
+                        Project Link
+                    </a>
+                </div>
+                <div class="italic text-[#222222] mt-0.5">
+                    <span class="font-semibold not-italic">Tech:</span> Python, FastAPI, LangChain, LLMS, RAG, MongoDB, Vector DB, OCR, AWS.
+                </div>
+                <ul class="resume-list">
+                    <li>Shipped production system detecting and redacting PII from documents using LLM + NLP; processed 500+ documents in beta.</li>
+                    <li>Built RAG pipeline for compliance-query search; deployed semantic search on vector DB (Pinecone/Weaviate) with &lt;300ms retrieval latency.</li>
+                    <li>Designed end-to-end ingestion (OCR &rarr; chunking &rarr; embeddings &rarr; indexing); reduced inference cost 35% via semantic caching.</li>
+                    <li>Integrated secure document upload and production-ready API endpoints.</li>
+                </ul>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="entry-block mb-2.5">
+                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline">
+                    <div class="font-bold text-[#111111]">
+                        2. Full-Stack AI Instagram Automation Platform
+                    </div>
+                </div>
+                <div class="italic text-[#222222] mt-0.5">
+                    <span class="font-semibold not-italic">Tech:</span> Python, FastAPI, MongoDB, JavaScript, REST APIs, Webhooks, Docker.
+                </div>
+                <ul class="resume-list">
+                    <li>Shipped production system handling 50K+ Instagram messages/month with real-time webhook processing and a 3-service microarchitecture.</li>
+                    <li>Built authentication, rate-limiting, database schema and 12 API endpoints; reduced message latency 40% via async processing.</li>
+                </ul>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="entry-block">
+                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline">
+                    <div class="font-bold text-[#111111]">
+                        3. Support Ticket Prioritization System - ML + NLP
+                    </div>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="underline font-medium text-[#111111] sm:text-right">
+                        Project Link
+                    </a>
+                </div>
+                <div class="italic text-[#222222] mt-0.5">
+                    <span class="font-semibold not-italic">Tech:</span> Python, Scikit-learn, Pandas, FastAPI, NLP, TF-IDF.
+                </div>
+                <ul class="resume-list">
+                    <li>Built end-to-end ML system: trained classification models (Logistic Regression, Naive Bayes) on 5K+ labeled tickets.</li>
+                    <li>Achieved 88% F1-score (precision 89%, recall 87%); deployed as real-time REST API processing 100+ tickets/day.</li>
+                    <li>Feature engineering with TF-IDF vectorization and text preprocessing; identified top 15 signal-rich features via feature importance analysis.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- EDUCATION -->
+        <section>
+            <h2 class="section-heading">EDUCATION</h2>
+            <div class="entry-block">
+                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline">
+                    <div class="font-bold text-[#111111]">
+                        Bachelor of Technology - Computer Science Engineering (AI Specialization)
+                    </div>
+                    <div class="font-semibold text-[#111111] sm:text-right">
+                        2025
+                    </div>
+                </div>
+                <div class="text-[#111111] mt-0.5">
+                    Parul University, Vadodara - CGPA: 7.06/10 | No active backlogs
+                </div>
+                <div class="text-[#111111] mt-0.5">
+                    <span class="font-bold">Relevant Coursework:</span> Data Structures, Algorithms, OOP, Software Engineering, Machine Learning, Database Systems, NLP
+                </div>
+            </div>
+        </section>
+
+        <!-- CERTIFICATES -->
+        <section>
+            <h2 class="section-heading">CERTIFICATES</h2>
+            <ul class="resume-list">
+                <li>Google Data Analytics Capstone - Coursera</li>
+                <li>Machine Learning Fundamentals - Udemy</li>
+                <li>Python for Data Analysis - Great Learning</li>
+                <li>MySQL Advanced - HackerRank</li>
+            </ul>
+        </section>
+
+    </main>
+
+</body>
+</html>
